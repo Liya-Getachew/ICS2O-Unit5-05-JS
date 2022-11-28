@@ -56,20 +56,66 @@
         </div>
       </header>
       <main class="mdl-layout__content">
+        <p>Insert the side lengths of your triangle below:</p>
         <img
           src="./images/notebook-animation.svg"
           alt="Computer"
           width="25%"
           height="25%"
         />
+        <form action="#" class="value">
+          Side A:
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              step="any"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="sideA"
+              placeholder="insert value"
+              aria-label="side A"
+            />
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+         <form action="#" class="value">
+          Side B:
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              step="any"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="sideB"
+              placeholder="insert value"
+              aria-label="side B"
+            />
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+         <form action="#" class="value">
+          Side C:
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              step="any"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="sideC"
+              placeholder="insert value"
+              aria-label="side C"
+            />
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
-          onclick="myButtonClicked()"
+          onclick="triangleClick()"
         >
-          Say "Hello, World!"
+          triangle
         </button>
-        <div id="hello-world"></div>
+        <div id="triangle-type">Your triangle is: </div>
       </main>
     </div>
   </body>
