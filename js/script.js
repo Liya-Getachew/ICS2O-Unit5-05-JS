@@ -33,9 +33,17 @@ function triangleClick() {
     Math.acos((sideA ** 2 + sideB ** 2 - sideC ** 2) / (2 * sideA * sideB)) *
     (180 / Math.PI)
 
-  if (angleA + angleB + angleC == 180) {
-    document.getElementById("triangle-type").innerHTML = "yes"
+  const sumOfAngles = Number((angleA).toFixed(2)) + Number((angleB).toFixed(2)) + Number((angleC).toFixed(2))
+
+  if (sumOfAngles == 180) {
+    if (sideA == sideB && sideB == sideC && sideC == sideA) {
+      document.getElementById("triangle-type").innerHTML = "Your triangle is: Equilateral"
+    } else if (sideA == sideB || sideB == sideC || sideC == sideA) {
+      document.getElementById("triangle-type").innerHTML = "Your triangle is: Isosceles"
+    } else {
+      document.getElementById("triangle-type").innerHTML = "Your triangle is: Scalene"
+    }
   } else {
-    document.getElementById("triangle-type").innerHTML = "no"
+    document.getElementById("triangle-type").innerHTML = "That's no triangle."
   }
 }
