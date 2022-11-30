@@ -33,15 +33,21 @@ function triangleClick() {
     Math.acos((sideA ** 2 + sideB ** 2 - sideC ** 2) / (2 * sideA * sideB)) *
     (180 / Math.PI)
 
-  const sumOfAngles = Number((angleA).toFixed(2)) + Number((angleB).toFixed(2)) + Number((angleC).toFixed(2))
+  const sumOfAngles =
+    Number(angleA.toFixed(2)) +
+    Number(angleB.toFixed(2)) +
+    Number(angleC.toFixed(2))
 
   if (sumOfAngles == 180) {
     if (sideA == sideB && sideB == sideC && sideC == sideA) {
-      document.getElementById("triangle-type").innerHTML = "Your triangle is: Equilateral"
+      document.getElementById("triangle-type").innerHTML =
+        "Your triangle is: Equilateral"
     } else if (sideA == sideB || sideB == sideC || sideC == sideA) {
-      document.getElementById("triangle-type").innerHTML = "Your triangle is: Isosceles"
+      document.getElementById("triangle-type").innerHTML =
+        "Your triangle is: Isosceles"
     } else {
-      document.getElementById("triangle-type").innerHTML = "Your triangle is: Scalene"
+      document.getElementById("triangle-type").innerHTML =
+        "Your triangle is: Scalene"
     }
   } else {
     document.getElementById("triangle-type").innerHTML = "That's no triangle."
